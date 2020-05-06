@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="element">
+        <div id="block">
+                <div class="dice">♜</div>
+                <div class="dice">♚</div>
+                <div class="dice">♝</div>
+                <div class="dice">♛</div>
+                <div class="dice">♞</div>
+                <div class="dice">♛</div>
+
+        </div>
+    </div>
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("dice");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000);
+    }
+</script>
+</body>
+</html>
