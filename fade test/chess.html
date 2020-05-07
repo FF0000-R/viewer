@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,11 +26,11 @@
         var i;
         var x = document.getElementsByClassName("dice");
         for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";  
+           x[i].style.opacity = "0";  
         }
         myIndex++;
         if (myIndex > x.length) {myIndex = 1}    
-        x[myIndex-1].style.display = "block";  
+        x[myIndex-1].style.opacity = "255";  
         setTimeout(carousel, 3000);
     }
 </script>

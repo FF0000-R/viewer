@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAPOR</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dice{
+            font-size: 5vw;
+            text-align: center;
+            font-weight: bolder;
+        }
+        .icons{
+            font-size: 10vw;
+            font-weight: normal;
+        }
+        .mono{
+            font-family: monospace;
+            font-weight: normal;
+            font-size: 3vw;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="element">
+        <div id="block">
+            <div class="dice icons">⛽ ☢</div>
+            <div class="dice">sample text</div>
+            <div class="dice">БOЖE</div><!--god, but as an exclamation, as in "oh my god" not really religious-->
+            <div class="dice">ON / off</div>
+            <div class="dice">this is Arial<br>not <del>Helvetica</del></div>
+            <div class="dice icons">⛝⚿</div>
+            <div class="dice">Broken<br>リアリティ</div><!--broken reality, seriously, play this game!-->
+            <div class="dice">no</div>
+            <div class="dice">НКМЗ</div><!--heavy industrial machines company-->
+            <div class="dice">ENTER<br><i>here</i></div>
+            <div class="dice">am I dead yet?</div>
+            <div class="dice">⛬<br>⛬ ⛬</div>
+            <div class="dice">I really don't<br>have anything<br>to say.</div>       <div class="dice icons">⛟ ⛜ ⛐</div>
+            <div class="dice">БОГ<br>МЕРТВ</div><!--god is dead-->
+            <div class="dice">this is not<br>content</div>
+            <div class="dice">/comfy/</div>
+            <div class="dice">네오<br>서울</div><!--neo seoul-->
+            <div class="dice">vaporwave <del>is dead</del></div>
+            <div class="dice"><del>long live</del> vaporwave</div>
+            <div class="dice">this is all nostalgia about something that never happened.</div>
+            <div class="dice">私には人格<br>はありません</div><!--i have no personality-->
+            <div class="dice icons">⛛</div>
+            <div class="dice">is this going somewhere?</div>
+            <div class="dice icons">⛧</div>
+            <div class="dice">hail satan lol</div>
+            <div class="dice">help</div>
+            <div class="dice icons">⛟ ⛜ ⛐</div>
+            <div class="dice">be nice! &#128077</div>
+            <div class="dice">obligatory<br>S P A C E S</div>
+            <div class="dice icons">☲ ☳ ☴ ☵</div>
+            <div class="dice"><i>beach life!</i><br>☀⛱⛱⛱☀</div>
+            <div class="dice">☎ me <3</div>
+            <div class="dice"><i>MIAMI</i> 生活</div><!--miami life-->
+            <div class="dice">no</div>
+            <div class="dice"><i>MIAMI</i> リフ</div><!--miami life but dumb(it is in phonetic, "rifu" instead of "seikatsu" the actual word for "life")-->
+            <div class="dice">I miss my<br>friends on msn :(</div>
+            <div class="dice mono">error: file not found.<br>viexer.exe cannot execute.</div>
+            <div class="dice">the moonlanding<br> is faked.</div>
+            <div class="dice">Bush did<br>9/11</div>
+            <div class="dice">КОСМОДРОМ</div><!--cosmodrome-->
+            <div class="dice">is it <i>real?</i></div>
+            <div class="dice">意味のない</div><!--meaningless-->
+            <div class="dice">taco time!</div>
+            <div class="dice"><i>checkout<br>BROKEN REALITY© !</i></div>
+            <div class="dice">i feel エムプティ</div><!--empty but again, in dumb japanese: "emuputi"-->
+            <div class="dice">follow me<br><i>everywhere</i></div>
+        </div>
+    </div>
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("dice");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 7000);
+    }
+</script>
+</body>
+</html>
