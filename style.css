@@ -5,8 +5,8 @@ body{
     height: 100vh;
     width: 100vw;
     display: flex;
-    background: linear-gradient(-65deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 600% 600%;
+    background: linear-gradient(-65deg, #48D597, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
     animation: AnimationName 200s ease infinite;
 }
 @keyframes AnimationName {
