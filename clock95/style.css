@@ -8,14 +8,9 @@
     font-style: normal;
 }
 body{
-    background-color: #c0c0c0;
-    color: #000;
     margin: 0;
     display: flex;
-}
-body:hover{
-    background-color: #1f1f1f;
-    color: #f0005d;
+    animation-duration: 1s;
 }
 #txt{
     margin: auto;
@@ -23,4 +18,26 @@ body:hover{
     font-size: 45vw;
     font-family: 'ProggyCleanTTSZBP', sans-serif;
     text-align: center;                
+}
+.light{
+    background-color: #c0c0c0;
+    color: #000;
+    animation-name: bright;
+    animation-duration: 3s;
+}
+.dark{
+    background-color: #1f1f1f;
+    color: #f0005d;
+    animation-name: dim;
+    animation-duration: 3s;
+}
+
+
+@keyframes dim {
+  0%   {background-color:#c0c0c0;color: #000;}
+  100% {background-color:#1f1f1f;color: #f0005d;}
+}
+@keyframes bright {
+  0%   {background-color:#1f1f1f;color: #f0005d;}
+  100% {background-color:#c0c0c0;color: #000;}
 }

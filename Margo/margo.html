@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARGO</title>
+    <link rel="stylesheet" href="margo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        
+      $(".filter").click(function(){
+
+        if($(this).hasClass("none")){
+          $(this).addClass("colors")
+          $(this).removeClass("none")}
+
+          else if($(this).hasClass("colors")){
+            $(this).addClass("none")
+            $(this).removeClass("colors")}
+        });
+      });
+    </script>
+    <style>
+        @font-face {
+          font-family: 'Hirosh';
+          src: url('/assets/HIROSHT.woff') format('woff'), /* Modern Browsers */
+               url('/assets/HIROSHT.TTF')  format('truetype'), /* Safari, Android, iOS */
+
+            /*sorry there are a lot of fonts missing that I have only localy,
+            I just couldn't be bothered to actually code them in.*/
+        
+    </style>
+</head>
+<body>
+    <div class="base"><!--I know the code looks horrible, stop judging me.-->
+      <div class="element lar">
+            <div class="title">
+              <div class="text">Alpha</div><div class="status">status - running</div><div class="interact">🡽</div>
+            </div>
+            <div class="content nofilter">
+              <iframe src="https://www.rainviewer.com/map.html?loc=50.6825,4.4604,8&oFa=0&oC=0&oU=0&oCS=1&oF=0&oAP=1&rmt=2&c=2&o=83&lm=0&th=1&sm=1&sn=1" width="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
+            </div>
+      </div>
+      <div class="element med">
+            <div class="title">
+              <div class="text">Bravo</div><div class="status"></div><div class="interact">🞬</div>
+            </div>
+            <div class="content nofilter">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLF3lu5b2iqGUPzfHL2CNu__WT6xAImRXW;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="element sma">
+            <div class="title">
+              <div class="text">Charlie</div><div class="status"></div><div class="interact">🞬</div>
+            </div>
+            <div class="content nofilter">
+              <iframe src="../vapor.html"></iframe>
+            </div>
+      </div>
+      <div class="element lar">
+            <div class="title">
+              <div class="text">DSN</div><div class="status">STATUS - RUNNING</div><div class="interact">🡽</div>
+            </div>
+            <div class="content nofilter">
+              <iframe src="https://eyes.nasa.gov/dsn/dsn.html"></iframe>
+            </div>
+      </div>
+    </div>
+    <div class="filter none"></div>
+</body>
+</html>

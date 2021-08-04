@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background: linear-gradient(-65deg, #23d5ab, #f0005d, #23d5ab, #f0005d, #23d5ab, #f0005d, #23d5ab);
+    background-size: 100% 1000%;
+    animation: AnimationName 100s  infinite;
+}
+@keyframes AnimationName {
+    0% {
+    background-position: 0% 100%
+    }
+    50% {
+    background-position: 100% 0%
+    }
+    100% {
+    background-position: 0% 100%
+    }
+}
+.base {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100vw;
+    padding: 2.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    color: #fff;
+    background-color: #000;
+    font-family: Gotham, sans-serif;
+    font-size: 7vw;
+    font-weight: 700;
+    mix-blend-mode: darken;
+}
+.element{
+    margin: 2.5vw;
+    flex-grow: 10;
+    display: flex;
+}
+.lar{
+    flex-grow: 10;
+    min-width: 85%;
+}
+.med{
+    flex-grow: 5;
+}
+.sma{
+    flex-grow: 1;
+    flex-shrink: 3;
+}
+.box{
+    background-color: #fff;
+    color: #000;
+    flex-grow: 1;
+    display: flex;
+}
+.title{
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: auto;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blk{
+    background-color: #000;
+    color: #fff;
+}
+.content{
+    background-color: #000;
+    color: #fff;
+    flex-grow: 1;
+    height: 100%;
+}

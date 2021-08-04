@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>brb!</title>
+		<style type="text/css">
+			body{
+				display: flex;
+			}
+			.gifs{
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="gifs">
+		  <img src="text.gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (1).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (2).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (3).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (4).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (5).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (6).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (7).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (8).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (9).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (10).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (11).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (12).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (13).gif">
+		</div>
+		<div class="gifs">
+		  <img src="text (14).gif">
+		</div>
+
+		<script>
+
+			var slideIndex = 0;
+			showGifs();
+
+			function showGifs() {
+        var i;
+        var gifs = document.getElementsByClassName("gifs");
+        for (i = 0; i < gifs.length; i++) {
+            gifs[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex> gifs.length) {slideIndex = 1} 
+        var rand = Math.floor((Math.random() * gifs.length));
+        gifs[rand].style.display = "block"; 
+        setTimeout(showGifs, 2000); // Change image every 2 seconds
+    }
+		</script>
+
+	</body>
+</html>

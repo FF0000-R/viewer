@@ -3,7 +3,22 @@
         <title>old time</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
+        $(document).ready(function(){
+          
+        $("body").click(function(){
+
+          if($(this).hasClass("light")){
+            $(this).addClass("dark")
+            $(this).removeClass("light")}
+
+            else if($(this).hasClass("dark")){
+              $(this).addClass("light")
+              $(this).removeClass("dark")}
+          });
+        });
+
         function startTime() {
           var today = new Date();
           var h = today.getHours();
@@ -19,7 +34,7 @@
         }
         </script>
     </head>
-    <body onload="startTime()">
+    <body onload="startTime()" class="light">
         
         <div id="txt"></div>
        
