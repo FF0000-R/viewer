@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>old time</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          
+        $("body").click(function(){
+
+          if($(this).hasClass("light")){
+            $(this).addClass("dark")
+            $(this).removeClass("light")}
+
+            else if($(this).hasClass("dark")){
+              $(this).addClass("light")
+              $(this).removeClass("dark")}
+          });
+        });
+
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          var ms = today.getMilliseconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          ms = checkMilli(ms);
+          document.getElementById('mainTime').innerHTML =
+          h + ":" + m;
+          document.getElementById('details').innerHTML =
+          s + ":" + ms;
+          var t = setTimeout(startTime, 63);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        function checkMilli(i) {
+          if (i < 10) {
+            i = "00" + i;   // add zeros in front of numbers < 10
+          } else if (i < 100) {
+            i = "0" + i;    // add zero in front of numbers < 100
+          }
+          return i;
+        }
+        </script>
+        <style type="text/css">
+          body{
+              margin: 0;
+              animation-duration: 1s;
+              font-size: 10vw;
+              font-family: 'Helvetica', sans-serif;
+              font-weight: bold;
+              background-color: black;
+              color: black;
+          }
+          .container {
+              display: flex;
+              margin: auto;
+              background-color: yellow;
+              width: 100vw;
+          }
+          #mainTime{
+              color: #f0005d;
+              text-align: center;                
+          }
+          #details{
+              color: inherit;
+              text-align: center;                
+          }
+          .light{
+              background-color: #c0c0c0;
+              color: #000;
+              animation-name: bright;
+              animation-duration: 3s;
+          }
+          .dark{
+              background-color: #1f1f1f;
+              color: #f0005d;
+              animation-name: dim;
+              animation-duration: 3s;
+          }
+
+
+        </style>
+    </head>
+    <body onload="startTime()">
+      <div class="container">
+        <div id="mainTime"></div>
+        <div class="blinker">:</div>
+        <div id="details"></div>
+      </div>
+       
+    </body>
+</html>

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTF-16</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+           $(document).ready(function(){
+                $("#uni").click(function (){ 
+                    var x = Math.random()*100;
+                    var y = Math.random()*100;
+
+                    $("#uni").css({top:y+"%", left:x+"%"});
+                });
+            });
+    </script>   
+    <style>
+        body {
+            margin: 0;
+            background-color: #000000;
+        }
+        img {
+            height: 8290px;
+            -webkit-filter: invert(1);
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <img id="uni" src="unifont.png">
+    <script>
+        
+    </script>
+</body>
+</html>
